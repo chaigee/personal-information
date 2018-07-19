@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 80%;
+            min-width: 700px;
+            height: auto;
+            border: black 2px solid;
+            margin: 20px auto;
+            overflow: auto;
+            zoom:1;
+            display: none;
+        }
+        .box1{
+            width: 30%;
+            height: 400px;
+            border-right: 1px black solid;
+            float:left;
+            margin-top: 100px;
+            text-align: center;
+        }
+        .box2{
+            width: 60%;
+            height: 1000px;
+            border-left: 1px black solid;
+            float:right;
+            margin-top: 50px;
+            margin-right: 30px;
+        }
+        .box1 .information img{
+            width:40%;
+        }
+        .box1 .information img,h3,p{
+            margin-top:2px;
+        }
+        .box2 .skill .head{
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .box2 .skill hr{
+            width: 90%;
+            border: 2px solid;
+            margin-top: 5px;
+        }
+        .box2 .skill .head h1{
+            display: inline-block;
+            background: #d3d3d3;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        .box2 .skill .head span{
+            cursor: pointer;
+        }
+        .box2 .skill .container{
+            height: auto;
+            margin-left:50px;
+            margin-top:10px;
+        }
+        .box2 .skill .container2 p{
+            display: inline-block;
+            margin-right: 50px;
+        }
+        .box2 .skill .container4 .block{
+            display: inline-block;
+            margin-right: 50px;
+        }
+        .box2 .skill .container4 p{
+            line-height: 1.5em;
+        }
+        .box2 .skill .container5 p{
+            line-height: 1.5em;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            $("#fade").fadeIn(3000);
+            $("#flip01").click(function () {
+                $("#panel01").slideToggle();
+            });
+            $("#flip02").click(function () {
+                $("#panel02").slideToggle();
+            });
+            $("#flip03").click(function () {
+                $("#panel03").slideToggle();
+            });
+            $("#flip04").click(function () {
+                $("#panel04").slideToggle();
+            });
+            $("#flip05").click(function () {
+                $("#panel05").slideToggle();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="main" id="fade">
+        <div class="box1">
+            <div class="information">
+                <img src="1.jpg" alt="个人图片">
+                <h3>詹振根</h3>
+                <p>电话：13172080961</p>
+                <p>邮箱：792802721@qq.com</p>
+                <p>求职意向：Web前端开发实习生</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="skill">
+                <div class="head">
+                    <h1>专业技能</h1>
+                    <span id="flip01"><img src="img01.png" alt="显示"></span>
+                </div>
+                <div class="container container1">
+                    <ol id="panel01">
+                        <li>熟悉HTML5和CSS3</li>
+                        <li>熟悉JavaScript，了解jQuery</li>
+                    </ol>
+                </div>
+                <hr>
+            </div>
+            <div class="skill">
+                <div class="head">
+                    <h1>教育背景</h1>
+                    <span id="flip02"><img src="img01.png" alt="显示"></span>
+                </div>
+                <div class="container container2" id="panel02">
+                    <p>2015.09——至今</p>
+                    <p>广东技术师范学院</p>
+                    <p>信息与计算科学</p>
+                    <p>全日制本科</p>
+                </div>
+                <hr>
+             </div>
+            <div class="skill">
+                <div class="head">
+                    <h1>工作经历</h1>
+                    <span id="flip03"><img src="img01.png" alt="显示"></span>
+                </div>
+                <div class="container container3" id="panel03">
+                    <p>尚无</p>
+                </div>
+                <hr>
+            </div>
+            <div class="skill">
+                <div class="head">
+                    <h1>项目经历</h1>
+                    <span id="flip04"><img src="img01.png" alt="显示"></span>
+                </div>
+                <div class="container container4" id="panel04">
+                    <p class="block">2018.05——2018.06</p>
+                    <p class="block">简易备忘录</p>
+                    <p><b>个人职责：</b><br>
+                    1.本人负责页面实现；<br>
+                    2.后期独立开发基于web的手机app，运用Hbuilder打包，app是开发课程的项目作业，未上线。<br>
+                    <b>技术核心：</b><br>
+                    1.本项目前后端分离，前端运用bootstrap框架;<br>
+                    2.后端采用js本地数据库存储。</p>
+                </div>
+                <hr>
+            </div>
+            <div class="skill">
+                <div class="head">
+                    <h1>个人技能</h1>
+                    <span id="flip05"><img src="img01.png" alt="显示"></span>
+                </div>
+                <div class="container container5" id="panel05">
+                    <p>在校课程：java、c语言、数据结构、mysql数据库、软件工程等课程；<br>
+                        语言技能：英语 CET4；<br>
+                        兴趣爱好：玩玩dota2，逛逛b站。
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
